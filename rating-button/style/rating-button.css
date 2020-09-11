@@ -1,0 +1,60 @@
+/* body{
+    margin-left: 100px;
+    margin-top: 100px;
+} */
+.main{
+    width: 320px;
+    height: 24px;
+    display: flex;
+    margin: 500px;
+}
+.district{
+    width: 160px;
+    height: 24px;
+}
+.left{
+    position: relative;
+}
+.rating{
+    width: 120px;
+    height: 24px;
+    transform: translate(-50%, -50%) rotateY(180deg);
+    position: absolute;
+    display: flex;
+    margin-left: 80px;
+    margin-top: 20px;
+    
+}
+.rating input{
+    display: none;
+}
+.rating label{
+    display: block;
+    cursor: pointer;
+    width: 20px;
+    
+}
+.rating label::before{
+    content: '\f005';
+    font-family: fontAwesome;
+    position: relative;
+    display: block;
+    font-size: 24px;
+    color: #101010;
+}
+.rating label::after{
+    content: url(./star.png);
+    font-family: fontAwesome;
+    position: absolute;
+    top: 0;
+    display: block;
+    font-size: 20px;
+    color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    opacity: 0;
+    transition: .5s;
+    
+}
+.rating label:hover::after,
+.rating input:checked~label:after{
+    opacity: 1;
+}
