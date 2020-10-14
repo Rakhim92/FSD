@@ -1,0 +1,49 @@
+@-webkit-keyframes enlarge
+{
+  0% {height: 117px; width: 129px;}
+  50% {height: 130px; width: 150px;}
+  100% {height: 117px; width: 129px;}
+}
+
+@keyframes enlarge
+{
+  0% {height: 117px; width: 129px;}
+  50% {height: 117px; width: 129px;}
+  100% {height: 130px; width: 150px;}
+}
+
+.love{
+  background: #333333; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  #333333 0%, #555555 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#333333), color-stop(100%,#555555)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg,  #333333 0%,#555555 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg,  #333333 0%,#555555 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg,  #333333 0%,#555555 100%); /* IE10+ */
+  background: linear-gradient(135deg,  #333333 0%,#555555 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#555555',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  display: block;
+  width: 250px;
+  height: 250px;
+  position: relative;
+  border-radius: 30px; 
+
+  .heart{
+    height: 117px;
+    width: 129px;
+    display: block;
+    position: absolute;
+    fill: #000000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+  &:hover{
+    .heart{
+      fill: #ff0000;
+      -webkit-animation: enlarge 1s infinite;
+      animation: enlarge 1s infinite;
+    }
+  }
+}

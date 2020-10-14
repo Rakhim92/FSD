@@ -1,0 +1,48 @@
+@keyframes enlarge {
+  0% {
+    height: 117px;
+    width: 129px;
+  }
+  50% {
+    height: 117px;
+    width: 129px;
+  }
+  100% {
+    height: 130px;
+    width: 150px;
+  }
+}
+.love {
+  background: #333333;
+  /* Old browsers */
+  /* FF3.6+ */
+  /* Chrome,Safari4+ */
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: linear-gradient(135deg, #333333 0%, #555555 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#333333", endColorstr="#555555",GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  display: block;
+  width: 250px;
+  height: 250px;
+  position: relative;
+  border-radius: 30px;
+}
+.love .heart {
+  height: 117px;
+  width: 129px;
+  display: block;
+  position: absolute;
+  fill: #000000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+.love:hover .heart {
+  fill: #ff0000;
+  animation: enlarge 1s infinite;
+}
