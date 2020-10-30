@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react_practise2</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        let destination = document.querySelector('#container');
+    
+    class HelloWorld extends React.Component {
+        render() {
+            const moloko =   {
+                backgroundColor: this.props.bgcolor,
+                margin: 50,
+                width: 300,
+                height: 100,
+                fontFamily: "sans-serif",
+                fontSize:18
+            };
+            return (
+                <div style={moloko}>
+                <p>Привет, {this.props.greeting1}</p>
+                <p>До свидания, {this.props.greeting2}</p>
+                <p>Салам Алейкум, {this.props.greeting3}</p>
+                </div>
+            )
+        }
+    } 
+
+    class Wrapper extends React.Component {
+        render() {
+            const bottle = {
+                backgroundColor: "purple",
+                width: 500,
+                height:1000
+            };
+        
+            return(
+                <div style={bottle}>
+                    <HelloWorld bgcolor="#58b3ff"
+                    greeting1='друг' 
+                    greeting2='уважаемый' 
+                    greeting3='досум'/> 
+                   
+                </div>
+            )
+        }
+    }
+
+
+
+    
+    
+    ReactDOM.render(
+    <div>
+        <Wrapper/>
+        
+
+    </div>,
+    destination
+);      
+    </script>
+
+</head>
+<body>
+    <div id="container"></div>    
+</body>
+</html>  
+
+
+
+// class UnderWrapper extends React.Component {
+//         render() {
+//             const package = {
+//                 backgroundColor: "black",
+//                 width: 1000,
+//                 height: 1000
+//             };
+//             return (
+              
+//                 </div>
+//             )    
+//         }
+//     }   
