@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\form_elements"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "..\\..\\headers_footers"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "form_elements"
+	}
+}
